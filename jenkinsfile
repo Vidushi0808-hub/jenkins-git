@@ -1,0 +1,18 @@
+pipeline{
+     agent any
+     stages{
+         stage('Print Build'){
+             steps{
+                 sh 'echo "Hello Jenkins from Github"'
+             }
+         }
+         stage('Script Build'){
+             steps{
+                 sh '''
+                   echo "Working on multiline scripts"
+                   ls -lah
+                   '''
+             }
+         }
+     }
+}
